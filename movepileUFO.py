@@ -78,9 +78,9 @@ pile_nodes_list = line_to_list(pile_nodes)
 
 #print(*pile_nodes_list, sep='\n')
 
-print (pile_nodes_list[0])
+print(pile_nodes_list[0])
 
-a = 10000
+print(type(pile_nodes[4]))
 
 
 
