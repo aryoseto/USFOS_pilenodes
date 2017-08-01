@@ -15,6 +15,8 @@ Next development:
 2. Put help feature
 3. Autorship print at the end of the run
 
+test git in this file!!
+
 """
 
 import os
