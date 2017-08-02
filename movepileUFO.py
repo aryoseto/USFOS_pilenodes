@@ -55,12 +55,18 @@ pile_nodes = []
 
 counter = 0
 # identify the pile node lines
-with open('K8F320T1_ufo.FEM', 'r') as infile:
-    for line in infile:
-        if 'NODE ' in line and counter <= 10 :
-            counter += 1
-            pile_nodes.append(line)
-           #print(line)
+with open('K8F320T1_ufo_MOD.FEM', 'w') as outfile:
+    with open('K8F320T1_ufo.FEM', 'r') as infile:
+        for line in infile:
+            if 'NODE ' in line and counter <= 10 :
+                counter += 1
+                #pile_nodes.append(line)
+                nodes = line.split()
+                
+
+
+
+                #print(line)
 
 #print('\n'.join(pile_nodes))
 #print(*pile_nodes)
