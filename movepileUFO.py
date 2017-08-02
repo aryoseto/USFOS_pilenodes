@@ -62,6 +62,7 @@ with open('K8F320T1_ufo_MOD.FEM', 'w') as outfile:
                 counter += 1
                 #pile_nodes.append(line)
                 nodes = line.split()
+                outfile.write(nodes[0], "   ", nodes[1], "   ", nodes[2], "   ",  )
                 
 
 
