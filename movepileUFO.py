@@ -62,10 +62,10 @@ with open('K8F320T1_ufo_MOD.FEM', 'w') as outfile:
                 counter += 1
                 #pile_nodes.append(line)
                 nodes = line.split()
-                outfile.write(nodes[0], "   ", nodes[1], "   ", nodes[2], "   ",  )
-                
-
-
+                zcoord = float(nodes[4]) + 10000
+                outfile.write(nodes[0] + ' a  ' + nodes[1] + '   ' + nodes[2] + '   ' + nodes[3] + '   ' + str(zcoord) + '\n')
+            else:
+                outfile.write(line)
 
                 #print(line)
 
@@ -73,21 +73,21 @@ with open('K8F320T1_ufo_MOD.FEM', 'w') as outfile:
 #print(*pile_nodes)
 
 #splitting each column
-def line_to_list (listtosplit):
-    splittedline = []
-    splittedlist = []
-    for line in listtosplit:
-        splittedline = line.split()
-        splittedlist.append(splittedline)
-    return splittedlist
-
-pile_nodes_list = line_to_list(pile_nodes)
-
-#print(*pile_nodes_list, sep='\n')
-
-print(pile_nodes_list[0])
-
-print(type(pile_nodes[4]))
+# def line_to_list (listtosplit):
+#     splittedline = []
+#     splittedlist = []
+#     for line in listtosplit:
+#         splittedline = line.split()
+#         splittedlist.append(splittedline)
+#     return splittedlist
+#
+# pile_nodes_list = line_to_list(pile_nodes)
+#
+# #print(*pile_nodes_list, sep='\n')
+#
+# print(pile_nodes_list[0])
+#
+# print(type(pile_nodes[4]))
 
 
 
